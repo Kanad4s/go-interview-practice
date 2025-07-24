@@ -26,3 +26,4 @@
 | suminitgo | 7 | 7 |
 | timlkko | 7 | 7 |
 | y1hao | 7 | 7 |
+| Kanad4s | 7 | 7 |
