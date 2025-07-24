@@ -23,6 +23,7 @@ func main() {
 
 	// Test FilterEven
 	evenOnly := FilterEven(numbers)
+
 	fmt.Printf("Even numbers only: %v\n", evenOnly)
 }
 
