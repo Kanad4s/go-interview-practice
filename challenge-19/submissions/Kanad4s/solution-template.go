@@ -23,37 +23,35 @@ func main() {
 
 	// Test FilterEven
 	evenOnly := FilterEven(numbers)
+
 	fmt.Printf("Even numbers only: %v\n", evenOnly)
 }
 
 // FindMax returns the maximum value in a slice of integers.
 // If the slice is empty, it returns 0.
 func FindMax(numbers []int) int {
-	// check for empty slice
 	if len(numbers) == 0 {
 		return 0
 	}
 
-	// init with first value
 	max := numbers[0]
 
-	// check subsequent vals for greater value
-	for _, v := range numbers {
-		if v > max {
-			max = v
+	for _, val := range numbers {
+		if val > max {
+			max = val
 		}
 	}
-
 	return max
+	// check for empty slice
+	// init with first value
+	// check subsequent vals for greater value
 }
 
 // RemoveDuplicates returns a new slice with duplicate values removed,
 // preserving the original order of elements.
 func RemoveDuplicates(numbers []int) []int {
-	// allocate result slice
 	res := make([]int, 0, len(numbers))
 
-	// loop thru slice filtering out dups
 	for _, v := range numbers {
 		if !slices.Contains(res, v) {
 			res = append(res, v)
@@ -61,34 +59,31 @@ func RemoveDuplicates(numbers []int) []int {
 	}
 
 	return res
+	// allocate result slice
+	// loop thru slice filtering out dups
 }
 
 // ReverseSlice returns a new slice with elements in reverse order.
 func ReverseSlice(slice []int) []int {
-	// allocate result slice
-	l := len(slice)
-	res := make([]int, l)
-
-	// loop thru slice filling res from the end backwards
-	for i, v := range slice {
-		res[l-i-1] = v
+	res := make([]int, len(slice))
+	for idx, val := range slice {
+		res[len(res)-1-idx] = val
 	}
-
 	return res
+	// allocate result slice
+	// loop thru slice filling res from the end backwards
 }
 
 // FilterEven returns a new slice containing only the even numbers
 // from the original slice.
 func FilterEven(numbers []int) []int {
-	// allocate result slice
 	res := make([]int, 0, len(numbers))
-
-	// loop thru slice filtering out dups
-	for _, v := range numbers {
-		if v%2 == 0 {
-			res = append(res, v)
+	for _, val := range numbers {
+		if val%2 == 0 {
+			res = append(res, val)
 		}
 	}
-
 	return res
+	// allocate result slice
+	// loop thru slice filtering out dups
 }
