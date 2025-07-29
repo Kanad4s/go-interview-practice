@@ -348,9 +348,9 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (user.rank <= 3) rankBadgeClass = 'top-3';
         else if (user.rank <= 10) rankBadgeClass = 'top-10';
 
-        // Generate challenge indicators (assuming challenges 1-28 exist)
+        // Generate challenge indicators (assuming challenges 1-30 exist)
         let challengeIndicators = '';
-        for (let i = 1; i <= 28; i++) {
+        for (let i = 1; i <= 30; i++) {
             const isCompleted = user.completedChallenges[i] === true;
             const indicatorClass = isCompleted ? 'completed' : 'not-completed';
             const content = isCompleted ? '✓' : '•';
